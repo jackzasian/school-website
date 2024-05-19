@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Lost and Found{% endblock %}
+{% block content %}
+<h1>Lost and Found</h1>
+<p>Here you can find the list of lost and found items. If you have lost something, please report it.</p>
+<ul>
+    {% for item in items %}
+    <li>{{ item.item_name }}: {{ item.description }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('report_lost') }}">Report Lost Item</a>
+{% endblock %}

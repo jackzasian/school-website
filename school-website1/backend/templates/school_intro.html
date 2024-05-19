@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}School Introduction{% endblock %}
+{% block content %}
+<h1>School Introduction</h1>
+<p>Welcome to the school introduction page. Here you can learn more about our school's history, mission, and facilities.</p>
+<div class="section">
+    <h2>School Map</h2>
+    <img src="{{ url_for('static', filename='images/school_map.png') }}" alt="School Map">
+    <p>Explore our campus with this interactive map.</p>
+    <!-- 加校区地图 -->
+</div>
+<div class="section">
+    <h2>Art Exhibition</h2>
+    <p>Explore the beautiful artworks created by our talented students.</p>
+    <!-- 加艺术展会的方案 -->
+</div>
+<div class="section">
+    <h2>Projects</h2>
+    <p>Discover the innovative projects our students are working on.</p>
+    <!-- 加东西  -->
+</div>
+{% endblock %}

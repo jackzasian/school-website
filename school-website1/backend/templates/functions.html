@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}Functions{% endblock %}
+{% block content %}
+<h1>Functions</h1>
+<p>Welcome to the functions page. Here you can find various tools and resources available for students and staff.</p>
+<div id="forum">
+    <h2>Forum</h2>
+    <p>Join discussions and share your thoughts in our school forum.</p>
+</div>
+<div id="resources">
+    <h2>Resources</h2>
+    <div id="clock">
+        <h3>Clock</h3>
+        <p>Current time: <span id="time"></span></p>
+    </div>
+    <div id="calculator">
+        <h3>Calculator</h3>
+        <input type="text" id="calc_display" readonly>
+        <div id="calc_buttons">
+            <!-- Calculator buttons here -->
+        </div>
+    </div>
+    <div id="seat_changer">
+        <h3>Seat Changer</h3>
+        <p>Randomly assign seats for your class.</p>
+    </div>
+</div>
+<script>
+    // JavaScript to update the time
+    function updateTime() {
+        document.getElementById('time').innerHTML = new Date().toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
+</div>
+{% endblock %}
